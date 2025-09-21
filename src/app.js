@@ -2,9 +2,8 @@ const express = require("express");
 const cors = require("cors");
 
 const studentRoutes = require("./routes/StudentRoutes");
-const attendanceRoutes = require("./routes/AttendanceRoutes");
-const analyticsRoutes = require("./routes/AnalyticsRoutes");
-
+const attendanceRoutes = require("./routes/attendanceRoutes");
+const analyticsRoutes = require("./routes/analyticsRoutes");
 const app = express();
 
 app.use(cors());
@@ -20,4 +19,3 @@ module.exports = app;
 app.get("/", (req, res) => {
   res.send("✅ Backend is running on port 5000");
 });
-
